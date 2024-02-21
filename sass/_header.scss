@@ -7,7 +7,7 @@
     width: 100%;
     height: rem(800);
 
-    @include breakpointDown(tablet) {
+    @include breakpointDown(sm_mobile) {
         background: url('../images/mobile/image-header.jpg');
         background-position: center;
         background-size: contain;
