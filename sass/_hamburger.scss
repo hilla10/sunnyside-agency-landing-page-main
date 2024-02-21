@@ -1,3 +1,7 @@
+.heamburger {
+    display: none;
+}
+
 @include breakpointDown(mobile) {
 
     .hamburger {

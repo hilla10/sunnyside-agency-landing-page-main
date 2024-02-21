@@ -18,10 +18,9 @@
     }
 
 
-
     &__flex {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between !important;
         align-items: center;
         padding: rem(38) rem(40);
 
@@ -43,9 +42,10 @@
 
         ul {
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
             gap: rem(50);
+            width: 100%;
 
             @include breakpointDown(mobile) {
                 position: absolute;
@@ -53,7 +53,7 @@
                 right: 0;
                 left: 0;
 
-                transform: translateX(300%);
+                transform: translateX(100vh);
                 display: block;
                 background: $white;
                 color: $veryDarkDesaturatedBlue;
