@@ -1,0 +1,122 @@
+.header {
+    background: url('../images/desktop/image-header.jpg');
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 100%;
+    height: rem(800);
+
+    @include breakpointDown(tablet) {
+        background: url('../images/mobile/image-header.jpg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        text-align: center;
+        height: rem(495);
+        width: 100%;
+    }
+
+
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: rem(38) rem(40);
+
+        @include breakpointDown(mobile) {
+            padding: rem(30);
+        }
+
+        .logo {
+            img {
+                width: rem(170);
+
+                @include breakpointDown(mobile) {
+                    width: rem(118);
+                }
+            }
+
+
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: rem(50);
+
+            @include breakpointDown(mobile) {
+                position: absolute;
+                top: rem(106);
+                right: 0;
+                left: 0;
+
+                transform: translateX(300%);
+                display: block;
+                background: $white;
+                color: $veryDarkDesaturatedBlue;
+                width: 87%;
+                margin: auto;
+                text-align: center;
+                height: rem(300);
+                z-index: 1;
+                padding-top: 20px;
+                transition: transform 0.5s ease-in-out;
+
+                &.active {
+                    transform: translateX(0);
+                }
+
+                li {
+                    padding: rem(18) 0;
+                }
+
+                a {
+                    color: $darkGrayishBlue;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: rem(-32);
+                    right: 0;
+                    border-top: rem(16) solid transparent;
+                    border-right: rem(16) solid $white;
+                    border-bottom: rem(16) solid $white;
+                    border-left: rem(16) solid transparent;
+                }
+
+            }
+
+        }
+
+        a {
+
+            font-weight: 500;
+            color: $white;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+                color: $darkBlue;
+            }
+        }
+    }
+
+    h1 {
+        color: $white;
+        text-transform: uppercase;
+        font-size: rem(58);
+        letter-spacing: rem(8);
+        font-weight: 700;
+        margin-top: rem(66);
+        margin-bottom: rem(93);
+
+        @include breakpointDown(mobile) {
+            margin-top: rem(56);
+            font-size: rem(38);
+            margin-bottom: rem(50);
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.footer {
+    text-align: center;
+    background: $footerBgColor;
+    color: $darkModerateCyan;
+    padding-top: 68px;
+
+    img {
+        width: 168px;
+        margin-right: 15px;
+        margin-bottom: 38px;
+    }
+
+    a {
+        color: $darkModerateCyan;
+        transition: color 300ms ease-in-out;
+
+        &:hover {
+            color: #fff !important;
+        }
+    }
+
+    .link-page {
+        gap: 58px;
+        margin-bottom: 88px;
+    }
+
+    .social-link {
+        gap: 28px;
+        padding-bottom: 50px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+            font-size: rem(21);
+            margin: 0;
+        }
+    }
+
+    .attribution {
+        padding-bottom: rem(30);
+
+        a {
+            color: $darkBlue;
+            padding: 0 5px;
+            font-weight: 700;
+        }
+    }
+
+}
